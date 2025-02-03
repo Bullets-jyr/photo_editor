@@ -28,11 +28,11 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    <key>NSCameraUsageDescription</key>
+    <string>App needs access to the camera</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>App needs permission for the photo library</string>
 	<key>UISupportedInterfaceOrientations</key>
-	<key>NSCameraUsageDescription</key>
-	<string>App needs access to the camera</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App needs permission for the photo library</string>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>

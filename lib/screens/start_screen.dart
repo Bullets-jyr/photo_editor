@@ -62,7 +62,7 @@ class _StartScreenState extends State<StartScreen> {
                           AppImagePicker(source: ImageSource.gallery).pick(
                             onPick: (File? image) {
                               // print(image!.path);
-                              imageProvider.changeImage(image!);
+                              imageProvider.changeImageFile(image!);
                               Navigator.of(context).pushReplacementNamed('/home');
                             },
                           );
@@ -71,20 +71,20 @@ class _StartScreenState extends State<StartScreen> {
                           'Gallery',
                         ),
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          AppImagePicker(source: ImageSource.camera).pick(
-                            onPick: (File? image) {
-                              // print(image!.path);
-                              imageProvider.changeImage(image!);
-                              Navigator.of(context).pushReplacementNamed('/home');
-                            },
-                          );
-                        },
-                        child: Text(
-                          'Camera',
-                        ),
-                      ),
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     AppImagePicker(source: ImageSource.camera).pick(
+                      //       onPick: (File? image) {
+                      //         // print(image!.path);
+                      //         imageProvider.changeImageFile(image!);
+                      //         Navigator.of(context).pushReplacementNamed('/home');
+                      //       },
+                      //     );
+                      //   },
+                      //   child: Text(
+                      //     'Camera',
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

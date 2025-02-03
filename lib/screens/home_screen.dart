@@ -38,7 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Consumer<AppImageProvider>(
           builder: (BuildContext context, value, Widget? child) {
             if (value.currentImage != null) {
-              return Image.memory(value.currentImage!);
+              return Image.memory(
+                value.currentImage!,
+                // fit: BoxFit.fill,
+              );
             }
             return Center(
               child: CircularProgressIndicator(),
@@ -59,7 +62,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Icons.crop_rotate,
                   'Crop',
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/crop');
+                    Navigator.of(context).pushNamed('/crop');
+                  },
+                ),
+                _bottomBarItem(
+                  Icons.filter_vintage_outlined,
+                  'Filters',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/filter');
                   },
                 ),
               ],
