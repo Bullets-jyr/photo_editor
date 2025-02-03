@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:photo_editor/provider/app_image_provider.dart';
+import 'package:photo_editor/screens/crop_screen.dart';
 import 'package:photo_editor/screens/home_screen.dart';
 import 'package:photo_editor/screens/start_screen.dart';
 import 'package:provider/provider.dart';
@@ -23,12 +24,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Photo Editor',
       theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFF111111),
+        primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          color: Colors.black,
+          centerTitle: true,
+          elevation: 0,
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       routes: <String, WidgetBuilder>{
         '/': (_) => StartScreen(),
         '/home': (_) => HomeScreen(),
+        '/crop': (_) => CropScreen(),
       },
       initialRoute: '/',
       // home: const StartScreen(),

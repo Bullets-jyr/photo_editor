@@ -13,7 +13,27 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text(
+          'Photo Editor',
+          style: TextStyle(
+            color: Colors.white70,
+          ),
+        ),
+        centerTitle: true,
+        leading: CloseButton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed('/');
+          },
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {},
+            child: Text('Save'),
+          ),
+        ],
+      ),
       body: Center(
         child: Consumer<AppImageProvider>(
           builder: (BuildContext context, value, Widget? child) {
@@ -24,6 +44,58 @@ class _HomeScreenState extends State<HomeScreen> {
               child: CircularProgressIndicator(),
             );
           },
+        ),
+      ),
+      bottomNavigationBar: Container(
+        width: double.infinity,
+        height: 60,
+        color: Colors.black,
+        child: SafeArea(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                _bottomBarItem(
+                  Icons.crop_rotate,
+                  'Crop',
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed('/crop');
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomBarItem(
+    IconData icon,
+    String title, {
+    required onPressed,
+  }) {
+    return InkWell(
+      onTap: onPressed,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              color: Colors.white,
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              title,
+              style: TextStyle(
+                color: Colors.white70,
+              ),
+            ),
+          ],
         ),
       ),
     );
