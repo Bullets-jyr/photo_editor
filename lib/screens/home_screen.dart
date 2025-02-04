@@ -79,6 +79,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).pushNamed('/adjust');
                   },
                 ),
+                _bottomBarItem(
+                  Icons.fit_screen_sharp,
+                  'Fit',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/fit');
+                  },
+                ),
               ],
             ),
           ),

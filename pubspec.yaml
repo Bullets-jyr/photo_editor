@@ -39,6 +39,9 @@ dependencies:
   crop_image: ^1.0.15
   screenshot: ^3.0.0
   colorfilter_generator: ^0.0.8
+  blur: ^4.0.0
+  pixel_color_picker: ^1.0.0
+  flutter_colorpicker: ^1.1.0
 
 dev_dependencies:
   flutter_test:
