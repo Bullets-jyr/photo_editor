@@ -100,6 +100,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).pushNamed('/blur');
                   },
                 ),
+                _bottomBarItem(
+                  Icons.emoji_emotions_outlined,
+                  'Sticker',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/sticker');
+                  },
+                ),
               ],
             ),
           ),
