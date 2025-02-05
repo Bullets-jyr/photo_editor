@@ -8,6 +8,7 @@ import 'package:photo_editor/screens/fit_screen.dart';
 import 'package:photo_editor/screens/home_screen.dart';
 import 'package:photo_editor/screens/start_screen.dart';
 import 'package:photo_editor/screens/sticker_screen.dart';
+import 'package:photo_editor/screens/text_screen.dart';
 import 'package:photo_editor/screens/tint_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         '/tint': (_) => TintScreen(),
         '/blur': (_) => BlurScreen(),
         '/sticker': (_) => StickerScreen(),
+        '/text': (_) => TextScreen(),
       },
       initialRoute: '/',
       // home: const StartScreen(),
