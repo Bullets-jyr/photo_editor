@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:photo_editor/provider/app_image_provider.dart';
 import 'package:photo_editor/screens/adjust_screen.dart';
+import 'package:photo_editor/screens/blur_screen.dart';
 import 'package:photo_editor/screens/crop_screen.dart';
 import 'package:photo_editor/screens/filter_screen.dart';
 import 'package:photo_editor/screens/fit_screen.dart';
 import 'package:photo_editor/screens/home_screen.dart';
 import 'package:photo_editor/screens/start_screen.dart';
+import 'package:photo_editor/screens/tint_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
         '/filter': (_) => FilterScreen(),
         '/adjust': (_) => AdjustScreen(),
         '/fit': (_) => FitScreen(),
+        '/tint': (_) => TintScreen(),
+        '/blur': (_) => BlurScreen(),
       },
       initialRoute: '/',
       // home: const StartScreen(),
