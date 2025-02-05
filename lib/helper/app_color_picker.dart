@@ -5,7 +5,7 @@ import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:pixel_color_picker/pixel_color_picker.dart';
 
 class AppColorPicker {
-  show(BuildContext context, {Color? backgroundColor, onPicked}) {
+  show(BuildContext context, {Color? backgroundColor, onPicked, bool alpha = false}) {
     return showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -16,7 +16,7 @@ class AppColorPicker {
               title: const Text('Pick a color!'),
               content: SingleChildScrollView(
                 child: HueRingPicker(
-                    enableAlpha: false,
+                    enableAlpha: alpha,
                     pickerColor: backgroundColor,
                     onColorChanged: (color) {
                       tempColor = color;

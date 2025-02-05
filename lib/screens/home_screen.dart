@@ -121,6 +121,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).pushNamed('/draw');
                   },
                 ),
+                _bottomBarItem(
+                  Icons.star_border,
+                  'Mask',
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/mask');
+                  },
+                ),
               ],
             ),
           ),

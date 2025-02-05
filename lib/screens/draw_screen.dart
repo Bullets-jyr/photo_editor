@@ -56,7 +56,7 @@ class _DrawScreenState extends State<DrawScreen> {
           IconButton(
             onPressed: () async {
               Uint8List? bytes = await screenshotController.capture();
-              // imageViewHolder.changeImage(bytes!);
+              imageProvider.changeImage(bytes!);
               if (!mounted) return;
               Navigator.of(context).pop();
             },
@@ -185,7 +185,7 @@ class _DrawScreenState extends State<DrawScreen> {
                     AppColorPicker().show(
                       context,
                       backgroundColor: _controller.drawColor,
-                      // alpha: true,
+                      alpha: true,
                       onPicked: (color) {
                         setState(() {
                           _controller.drawColor = color;

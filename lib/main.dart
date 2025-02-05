@@ -7,6 +7,7 @@ import 'package:photo_editor/screens/draw_screen.dart';
 import 'package:photo_editor/screens/filter_screen.dart';
 import 'package:photo_editor/screens/fit_screen.dart';
 import 'package:photo_editor/screens/home_screen.dart';
+import 'package:photo_editor/screens/mask_screen.dart';
 import 'package:photo_editor/screens/start_screen.dart';
 import 'package:photo_editor/screens/sticker_screen.dart';
 import 'package:photo_editor/screens/text_screen.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
         '/sticker': (_) => StickerScreen(),
         '/text': (_) => TextScreen(),
         '/draw': (_) => DrawScreen(),
+        '/mask': (_) => MaskScreen(),
       },
       initialRoute: '/',
       // home: const StartScreen(),
