@@ -90,17 +90,32 @@ class _TextScreenState extends State<TextScreen> {
       children: [
         Scaffold(
           appBar: AppBar(
-            leading: const CloseButton(),
-            title: const Text('Text'),
+            title: Text(
+              'Text',
+              style: TextStyle(
+                color: Colors.white70,
+              ),
+            ),
+            centerTitle: true,
+            leading: CloseButton(
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed('/home');
+              },
+            ),
             actions: [
               IconButton(
-                  onPressed: () async {
-                    Uint8List? image = await controller.saveAsUint8List();
-                    imageProvider.changeImage(image!);
-                    if (!mounted) return;
-                    Navigator.of(context).pop();
-                  },
-                  icon: const Icon(Icons.done))
+                onPressed: () async {
+                  Uint8List? image = await controller.saveAsUint8List();
+                  imageProvider.changeImage(image!);
+                  if (!mounted) return;
+                  Navigator.of(context).pop();
+                },
+                icon: const Icon(
+                  Icons.done,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
           body: Center(

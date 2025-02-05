@@ -44,6 +44,7 @@ dependencies:
   flutter_colorpicker: ^1.1.0
   lindi_sticker_widget: ^1.0.1
   text_editor: ^0.7.0
+  painter: ^2.0.0
 
 dev_dependencies:
   flutter_test:

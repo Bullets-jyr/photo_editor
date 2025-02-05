@@ -400,12 +400,15 @@ class _FitScreenState extends State<FitScreen> {
           children: [
             IconButton(
               onPressed: () {
-                AppColorPicker().show(context, backgroundColor: backgroundColor,
-                    onPicked: (color) {
-                  setState(() {
-                    backgroundColor = color;
-                  });
-                });
+                AppColorPicker().show(
+                  context,
+                  backgroundColor: backgroundColor,
+                  onPicked: (color) {
+                    setState(() {
+                      backgroundColor = color;
+                    });
+                  },
+                );
               },
               icon: Icon(
                 Icons.color_lens_outlined,
